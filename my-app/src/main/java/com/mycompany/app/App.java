@@ -55,8 +55,12 @@ public class App
             double n1=leer.nextInt();
             System.out.println("num2");
             double n2=leer.nextInt();
-            double divi=x.calcular(n1,"/", n2);
-            System.out.println("la division es: "+ divi);
+            try {
+                double divi=x.calcular(n1,"/", n2);
+                System.out.println("la division es: "+ divi);
+                } catch(Exception e) {
+                    throw e;
+                    }
         }
         if(opc==5)
         {   

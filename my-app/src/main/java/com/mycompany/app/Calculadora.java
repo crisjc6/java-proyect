@@ -3,7 +3,7 @@ public class Calculadora {
      public static Double calcular(final double numberOne, final String operation, final double numberTwo)
   {
       Double Result = null;
-       if ((numberTwo == 0 && operation.equals("/")) || !operation.matches("[\\*//*+-]?"))
+       if (!operation.matches("[\\*//*+-]?"))
             return null;
         else {
             switch (operation) {
@@ -14,14 +14,17 @@ public class Calculadora {
                     Result = numberOne - numberTwo;
                     break;
                 case "/":
+                    if(numberTwo == 0.0)
+                        throw new ArithmeticException("No se puede dividir para (0).");
                     Result = numberOne / numberTwo;
+                        
                     break;
                 case "*":
                     Result = numberOne * numberTwo;
                     break;
             }
         }
-        return String.valueOf(Result).matches("(.*)0.0") ? 0 : Result;
+        return String.valueOf(Result).matches("-0.0") ? 0 : Result;
   }
   public static Double raizPotenciaCuadrada(final double numberOne, final String operation)
   {
