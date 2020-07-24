@@ -1,0 +1,4 @@
+com\hencris\negocio\NegocioDao.class
+com\hencris\negocio\NegocioEntity.class
+com\hencris\negocio\NegocioService.class
+com\hencris\principal\Principal.class
