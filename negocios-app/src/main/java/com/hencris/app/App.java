@@ -4,15 +4,18 @@ package com.hencris.app;
  * Hello world!
  *
  */
+
+import java.util.Scanner;
+
 import com.hencris.negocio.NegocioEntity;
 import com.hencris.negocio.NegocioService;
-import java.util.Scanner;
 
 public class App 
 {
     public static void main( String[] args )
     {
         Scanner entrada = new Scanner(System.in);
+        System.out.println("Hello world");
         boolean salir = false;
         NegocioService negocioService = new NegocioService();
     while (!salir) {   
