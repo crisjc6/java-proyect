@@ -14,7 +14,6 @@ public class App
     {
         Scanner entrada = new Scanner(System.in);
         boolean salir = false;
-        System.out.println( "Hello World!" );
         NegocioService negocioService = new NegocioService();
     while (!salir) {   
             // Le indicamos al usuario cuales son sus opciones:
