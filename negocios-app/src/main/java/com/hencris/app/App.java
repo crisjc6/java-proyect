@@ -6,11 +6,8 @@ package com.hencris.app;
  */
 import com.hencris.negocio.NegocioEntity;
 import com.hencris.negocio.NegocioService;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
-import javax.lang.model.element.Element;
 public class App 
 {
     public static void main( String[] args )
