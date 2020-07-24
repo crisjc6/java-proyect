@@ -26,7 +26,14 @@ public class App
             System.out.println(" 0 - Salir ");
             
             // Obtenemos el numero ingresado por el usuario en la consola:
-            int opcion = Integer.parseInt(entrada.nextLine());
+            int opcion = 0;
+            try {
+                opcion = Integer.parseInt(entrada.nextLine());
+            } catch (Exception e) {
+                System.out.println("Error: Exception no se puede guardar el valor ingresado " + e );
+                salir = true;
+                //TODO: handle exception
+            }
            
             // Según el número que el usuario ingreso en la consola se ejecutará el "case" correspondiente.
             switch(opcion) {
