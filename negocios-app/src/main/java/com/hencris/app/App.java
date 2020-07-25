@@ -15,7 +15,6 @@ public class App
     public static void main( String[] args )
     {
         Scanner entrada = new Scanner(System.in);
-        System.out.println("Hello world");
         boolean salir = false;
         NegocioService negocioService = new NegocioService();
     while (!salir) {   
