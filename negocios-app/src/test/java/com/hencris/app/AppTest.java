@@ -3,10 +3,12 @@ package com.hencris.app;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import com.hencris.negocio.NegocioEntity;
-import com.hencris.negocio.NegocioService;
+import java.util.List;
 
 import org.junit.Test;
+
+import com.hencris.negocio.NegocioEntity;
+import com.hencris.negocio.NegocioService;
 
 
 /**
@@ -50,19 +52,37 @@ public class AppTest
         assertEquals(expected.getNombre(),nombreActualizar);
     }
     @Test
-    public void EliminarNegociosTest()
-    {
-        assertTrue( true );
-    }
-    @Test
     public void ListarNegociosTest()
     {
-        assertTrue( true );
+        negocio.setDireccion("Av. Naciones Unidadas");
+        negocio.setNombre("Peluqueria");
+        negocio.setRazonSocial("Enrique Perez");
+        negocio.setRuc("1104125883");
+        final NegocioEntity actual = negocioService.registrar(negocio);
+        final  List<NegocioEntity> expected = negocioService.listar();
+        assertEquals(expected.get(0),actual);
     }
     @Test
     public void obtenerUnoNegociosTest()
     {
-        assertTrue( true );
+        negocio.setDireccion("Av. Naciones Unidadas");
+        negocio.setNombre("Peluqueria");
+        negocio.setRazonSocial("Enrique Perez");
+        negocio.setRuc("1104125883");
+        final NegocioEntity negocioCreado = negocioService.registrar(negocio);
+        final  boolean expected = negocioService.obtenerUno("1104125883");
+        assertEquals(expected,true);
+    }
+    @Test
+    public void EliminarNegociosTest()
+    {
+        negocio.setDireccion("Av. Naciones Unidadas");
+        negocio.setNombre("Peluqueria");
+        negocio.setRazonSocial("Enrique Perez");
+        negocio.setRuc("1104125883");
+        final NegocioEntity negocioCreado = negocioService.registrar(negocio);
+        final  boolean expected = negocioService.eliminar("1104125883");
+        assertEquals(expected,true);
     }
     
 }

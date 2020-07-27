@@ -1,3 +1,4 @@
+com\hencris\app\App.class
 com\hencris\negocio\NegocioDao.class
 com\hencris\negocio\NegocioEntity.class
 com\hencris\negocio\NegocioService.class
